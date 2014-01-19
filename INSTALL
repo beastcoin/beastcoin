@@ -1,0 +1,9 @@
+Building BeastCoin
+
+See doc/readme-qt.rst for instructions on building BeastCoin-QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of BeastCoin.
+
+See doc/build-*.txt for instructions on building BeastCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of BeastCoin.
