@@ -897,8 +897,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 	{
 		nSubsidy *= 2;
 	}
-	
-	if(day ==
+
 
 	// Subsidy is cut in half every 525600 blocks, which will occur approximately every 12 months
 	nSubsidy >>= (nHeight / 525600); 
@@ -2015,7 +2014,7 @@ bool LoadBlockIndex(bool fAllowNew)
         pchMessageStart[1] = 0xc2;
         pchMessageStart[2] = 0xb6;
         pchMessageStart[3] = 0xf1;
-        hashGenesisBlock = uint256("0xc0b6377baef1853b2c8176fd7926b13a04cf21438711e828430b7632bb0f70c8");
+        hashGenesisBlock = uint256("0xcc32c05a7f54137c17a3b2b548121f1764370d0081ec10060c9d987a80527e07");
     }
 
     //
@@ -2049,7 +2048,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1390156466;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 12468024;
+        block.nNonce   = 00026000;
 
 		if (fTestNet)
         {
@@ -2060,10 +2059,10 @@ bool LoadBlockIndex(bool fAllowNew)
         //// debug print
         printf("block.GetHash() = %s\n", block.GetHash().ToString().c_str());
         printf("block.hashMerkleRoot = %s\n", block.hashMerkleRoot.ToString().c_str());
-        assert(block.hashMerkleRoot == uint256("0x13757c3610411891452ac1f04d7f81946339b0e5b5aba216e6646e81805c4bb1"));
+        assert(block.hashMerkleRoot == uint256("0x1225aac53f5bc2b2bb207abc2fde1223a1cf02f5b9387b9c46bc573210bfb766"));
 
         // If genesis block hash does not match, then generate new genesis hash.
-        if (false && block.GetHash() != hashGenesisBlock)
+        if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
